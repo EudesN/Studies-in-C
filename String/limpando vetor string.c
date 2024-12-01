@@ -10,6 +10,6 @@ int main(){
         str[i] = '\0';
     }
     printf("Digite algo (string aprimorada): ");
-    scanf("%19[^\n]", str);
+    scanf("%19s", str);
     printf("Voce digitou: %s\n", str);
 }
