@@ -14,7 +14,6 @@ int main(){
     printf("tamanho da palavra 2 %d\n", len2);
     
     for(int i = 0; palavra1[i] != '\0' ; i++){
-        int j = 0;
         for(int j = 0;palavra2[j] !='\0'; j++)
         if(palavra1[i] != palavra2[j]){
             break;
