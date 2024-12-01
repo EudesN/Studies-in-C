@@ -29,12 +29,14 @@ int main(){
     }
     int maxssvenda = 0;
     for(int i = 0; i < 12; i++){
+
         if(ssvenda[i] > maxssvenda){
             maxssvenda = ssvenda[i];
         }
     }
     printf("Mes(es) com mais semanas sem vender redes: ");
     for(int i = 0; i < 12; i++){
+
         if(ssvenda[i] == maxssvenda){
             printf(" %d", i + 1);
         }
