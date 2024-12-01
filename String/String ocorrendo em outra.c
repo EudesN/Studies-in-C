@@ -12,14 +12,14 @@ int main(){
     int len2 = (strlen(palavra2));
     for(int i = 0;i < len1; i++){
         for(int j = 0;j < len2; j++)
-        if(palavra1[i] == palavra2[j]){
-            encontrado++;
-        }
-        else{
+        if(palavra1[i] != palavra2[j]){
             break;
         }
+        else{
+            encontrado++;
+        }
     }
-    printf("%d", encontrado);
+    printf("%d\n", encontrado);
     if(encontrado == len1){
         printf("encontrado");
     }
