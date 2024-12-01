@@ -3,7 +3,7 @@
 
 int main(){
     char palavra1[31], palavra2[31];
-    int encontrado = 0;
+    int iguais = 0;
     printf("Informe a primeira palavra: ");
     scanf("%s", palavra1);
     printf("Informe a segunda palavra: ");
@@ -14,21 +14,21 @@ int main(){
     printf("tamanho da palavra 2 %d\n", len2);
     
     for(int i = 0; palavra1[i] != '\0' ; i++){
-        for(int j = 0;palavra2[j] !='\0'; j++)
-        if(palavra1[i] != palavra2[j]){
-            break;
-        }
-        else{
-            encontrado++;
+        for(int j = 0; j< palavra2[j] != '\0'; j++){
+            if(palavra1[i] == palavra2[j]){
+                iguais++;
+            }
+            else{
+                break;
+            }
         }
     }
-    printf("%d\n", encontrado);
-    if(encontrado == len2){
-        printf("encontrado\n");
+    printf("O numero de letras iguais é %d\n", iguais);
+    if(iguais == len2){
+        printf("Palavra 2 encontrada em 1");
     }
     else{
-        printf("Nao encontrado\n");
+        printf("palavra 2 não encontrada");
     }
-
     return 0;
 }
