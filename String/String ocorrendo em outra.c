@@ -10,6 +10,9 @@ int main(){
     scanf("%s", palavra2);
     int len1 = (strlen(palavra1));
     int len2 = (strlen(palavra2));
+    printf("tamanho da palavra 1 %d", len1);
+    printf("tamanho da palavra 2 %d", len2);
+    
     for(int i = 0;i < len1; i++){
         for(int j = 0;j < len2; j++)
         if(palavra1[i] != palavra2[j]){
