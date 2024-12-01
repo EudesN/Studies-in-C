@@ -12,6 +12,6 @@ int main(){
         str[i] = '\0';
     }
     printf("Digite algo (string aprimorada): ");
-    scanf("%20s", str); // limita a leitura até 20 caracteres
+    scanf("%20[^\n]", str); // limita a leitura até 20 caracteres
     printf("Voce digitou: %s\n", str);
 }
