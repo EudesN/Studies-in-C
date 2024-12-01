@@ -14,4 +14,6 @@ int main(){
     printf("Digite algo (string aprimorada): ");
     scanf("%20[^\n]", str); // limita a leitura até 20 caracteres
     printf("Voce digitou: %s\n", str);
+    while(getchar() != '\n');
+    
 }
