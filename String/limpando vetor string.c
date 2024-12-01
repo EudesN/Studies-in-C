@@ -8,7 +8,7 @@ int main(){
 
     while(getchar() != '\n'); // limpa o buffer 
 
-    for(int i = 0; i < 20; i++){
+    for(int i = 0; i < 20; i++){ // limpa o vetor manualmente
         str[i] = '\0';
     }
     printf("Digite algo (string aprimorada): ");
