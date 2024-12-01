@@ -1,15 +1,17 @@
 # include <stdio.h>
 
 int main(){
-    char str[20];
+    char str[21];
     printf("Digite algo(string convencional): ");
     scanf("%s", str);
     printf("%s\n", str);
-    fflush(stdin); //
+
+    while(getchar() != '\n'); // limpa o buffer 
+
     for(int i = 0; i < 20; i++){
         str[i] = '\0';
     }
     printf("Digite algo (string aprimorada): ");
-    scanf("%19s", str);
+    scanf("%20s", str); // limita a leitura até 20 caracteres
     printf("Voce digitou: %s\n", str);
 }
