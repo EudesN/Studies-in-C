@@ -6,24 +6,26 @@ int main(){
         for(int c = 0;c < 4; c++){
             scanf("%d", &vendas[l][c]);
             totano += vendas[l][c];
+
             if(vendas[l][c] == 0){
-                ssvenda[l] = 1;
+                ssvenda[l]++;
             }
         }
     }
     for(int l = 0;l < 12; l++){
+        totmes = 0;
         for(int c = 0; c < 4;c++){
             totmes += vendas[l][c];
-            printf("O total vendido no mes %d: %d", l, totmes);
         }
+        printf("O total vendido no mes %d: %d", l + 1, totmes);
     }
-    for(int l = 0;l < 12;l++){
-        for(int c = 0;c < 4;l++){
+    for(int c = 0; c < 4; c++){
+        for(int l = 0; l < 12; l++){
             totsem[c] += vendas[l][c];
         }
     }
     for(int i = 0;i < 4;i++){
-        printf("O total vendido na semana %d: %d", i, totsem[i]);
+        printf("O total vendido na semana %d: %d", i + 1, totsem[i]);
     }
     int maxssvenda = 0;
     for(int i = 0; i < 12; i++){
@@ -33,7 +35,7 @@ int main(){
     }
     printf("Mes(es) com mais semanas sem vender redes: ");
     for(int i = 0; i < 12; i++){
-        if(ssvenda == maxssvenda){
+        if(ssvenda[i] == maxssvenda){
             printf(" %d", i + 1);
         }
     }
