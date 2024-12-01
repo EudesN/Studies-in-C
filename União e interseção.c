@@ -11,6 +11,10 @@ int main(){
         scanf("%d", &Y[i]);
         U[100 + i] = Y[i];
     }
+    printf("Uniao: ");
+    for(int i=0; i<200;i++){
+        printf("%d ", U[i]);
+    }
     printf("Intersecao: ");
     int encontro = 0; // var que verifica se interseção existe
     for(int i = 0; i < 100; i++){
