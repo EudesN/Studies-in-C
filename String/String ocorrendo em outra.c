@@ -16,6 +16,7 @@ int main(){
     for(int i = 0; palavra1[i] != '\0' ; i++){
         for(int j = 0; j< palavra2[j] != '\0'; j++){
             if(palavra1[i] == palavra2[j]){
+                printf("%s\n", palavra1[i]);
                 iguais++;
             }
             else{
@@ -23,12 +24,12 @@ int main(){
             }
         }
     }
-    printf("O numero de letras iguais é %d\n", iguais);
+    printf("O numero de letras iguais e %d\n", iguais);
     if(iguais == len2){
         printf("Palavra 2 encontrada em 1");
     }
     else{
-        printf("palavra 2 não encontrada");
+        printf("palavra 2 nao encontrada");
     }
     return 0;
 }
