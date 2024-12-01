@@ -11,9 +11,11 @@ int main(){
     for(int i = 0;i < 100; i++){
         int exuni = 0;
         scanf("%d", &Y[i]);
-        if(Y[i] == U[i]){ // verifica se Y[i] já existe no vetor U
-        exuni = 1;
+        for(int j = 0; j < 100; i++){
+            if(Y[i] == U[j]){ // verifica se Y[i] já existe no vetor U
+            exuni = 1;
             break;
+            }
         }
         if( exuni == 0){
             U[100 + i] = Y[i]; // copiando elementos de Y para U na posição 100 a 199
