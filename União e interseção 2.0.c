@@ -4,6 +4,9 @@ int main(){
     int X[100], Y[100], U[200];
     int inter[100], exinter[100];
 
+
+
+
     for(int i = 0; i < 100; i++){
         scanf("%d", &X[i]);
         U[i] = X[i]; // copiando elementos de X para U na mesma posição de 0 a 99
