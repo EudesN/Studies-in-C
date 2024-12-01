@@ -5,7 +5,7 @@ int main(){
     printf("Digite algo(string convencional): ");
     scanf("%s", str);
     printf("%s\n", str);
-    fflush(stdin);
+    fflush(stdin); //
     for(int i = 0; i < 20; i++){
         str[i] = '\0';
     }
