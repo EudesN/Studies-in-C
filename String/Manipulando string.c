@@ -11,5 +11,5 @@ int main(){
     }
     printf("Digite algo (string aprimorada): ");
     scanf("%19[^\n]", str);
-    printf("Você digitou: %s\n", str);
+    printf("Voce digitou: %s\n", str);
 }
