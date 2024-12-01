@@ -1,8 +1,8 @@
 # include <stdio.h>
 
 int main(){
-    char vetor[6];
-    scanf("%s", vetor);
-    printf("%s", vetor);
+    char str[6];
+    scanf("%s", str);
+    printf("%s\n", str);
     return 0;
 }
