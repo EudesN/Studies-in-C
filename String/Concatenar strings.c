@@ -20,7 +20,7 @@ char str3[len1 +len2];
         str3[len1 + i] = str2[i];
     }
     str3[len1 + len2] = '\0';
- 
+
     printf("%s\n", str3);
     return 0;
 }
