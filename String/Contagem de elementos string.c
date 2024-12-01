@@ -7,7 +7,7 @@ int main(){
     getchar();
     char str[x];
     
-    scanf("%[^\n]", str);
+    scanf("%s", str);
 
     for(len = 0; str[len] != '\0'; len++);
     printf("Essa string tem tamanho: %d\n", len);
