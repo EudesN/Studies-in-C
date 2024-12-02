@@ -2,7 +2,7 @@
 
 int main (){
     int cont=0, len1, len2;
-    char palavra1[64], palavra2[64];
+    char palavra1[31], palavra2[31];
     scanf("%s", palavra1);
     scanf("%s", palavra2);
 
