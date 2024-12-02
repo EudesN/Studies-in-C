@@ -7,13 +7,13 @@ int main(){
     char T;
     scanf("%d", &coluna);
     scanf(" %c", &T);
+
     for(int l = 0; l < 12; l++){
         for(int c = 0; c < 12; c++){
             scanf("%f", &M[l][c]);
         }
     }
     for(int l = 0; l < 12; l++){
-        scanf("%f", &M[l][coluna]);
         soma += M[l][coluna];
     }
     if( T == 'S'){
