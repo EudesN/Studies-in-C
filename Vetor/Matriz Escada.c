@@ -1,9 +1,18 @@
 # include <stdio.h>
 
 int main(){
-    float M[12][12];
-    char O;
-    int cont = 0;
+    int M, N;
     
+    scanf("%d", &M);
+    scanf("%d", &N);
+    int matriz[M][N];
+
+    for(int i = 0; i < M;i++){
+        for(int j = 0; j < N; j++){
+            scanf("%d", &matriz[i][j]);
+        }
+    }
+
+
     return 0;
 }
