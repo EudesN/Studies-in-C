@@ -1,13 +1,14 @@
 # include <stdio.h>
 
 int main(){
-    float M[12][12];
-    int cont = 0;
-    float soma = 0;
+    float M[12][12], soma;
     char O;
-    scanf(" %c", &O);
+    int cont = 0;
+
+    scanf("%c", &O);
+
     for(int l = 0; l < 12; l++){
-        for(int c= 0; c < 12; c++){
+        for(int c = 0; c < 12; c++){
             scanf("%f", &M[l][c]);
         }
     }

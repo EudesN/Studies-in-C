@@ -1,28 +1,40 @@
 # include <stdio.h>
 
-int main(){
-    float M[12][12], soma;
-    char O;
-    int cont = 0;
-
-    scanf("%c", &O);
-
-    for(int l = 0; l < 12; l++){
-        for(int c = 0; c < 12; c++){
-            scanf("%f", &M[l][c]);
+int main (){
+    char matriz[5][5];
+    for(int l = 0;l < 5; l++){
+        for(int c = 0;c < 5;c++){
+            matriz[l][c] = '*';
         }
     }
-    for(int l = 0; l < 12; l++){
-        for(int c = l + 1; c < 12; c++){
-            soma += M[l][c];
-            cont++;
+    for(int l = 0;l < 5; l++){
+        for(int c = 0;c < 5;c++){
+            printf("%c ", matriz[l][c]);
         }
+        printf("\n");
     }
-    if(O == 'S'){
-        printf("%.1f\n", soma);
+    printf(" \n");
+    for(int l = 0; l < 5; l++){
+        for(int c = 0; c < 5; c++){
+            if(l == c){
+                printf("%c ", matriz[l][c]);
+            }
+            else{
+                printf("  ");
+            }
+        }
+        printf("\n");
     }
-    else if(O == 'M'){
-        printf("%.1f\n", soma / cont);
+    for(int l = 0; l < 5; l++){
+        for(int c = 0; c < 5; c++){
+            if(l + c == 4){
+                printf("%c ", matriz[l][c]);
+            }
+            else{
+                printf("  ");
+            }
+        }
+        printf("\n");
     }
     return 0;
 }
