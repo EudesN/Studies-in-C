@@ -17,6 +17,7 @@ int main(){
 
     for(int i = 0; i < M;i++){
         for(int j = 0; j < N; j++){
+            c_pivo[i] = -1; // iniciada com menos 1 para caso a linha saja toda composta por zeros(inica q tá sem pivô)
             if(matriz[i][j] != 0){ // procura o primeiro elemento da matriz diferente de 0
                 c_pivo[i] = j; // quardar o indice da coluna do pivo
                 break;
