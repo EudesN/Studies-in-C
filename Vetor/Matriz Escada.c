@@ -25,8 +25,11 @@ int main(){
     }
     // verificar se não há elementos diferente de 0 abaixo dos pivos
     for(int i = 0; i < M; i++){
-        for(int j = 0; j < N;j++){
-            
+        for(int j = 0; j < c_pivo; i++){
+            if(matriz[i][c_pivo[j] + 1] != 0){
+                printf("N\n");
+                return 0;
+            }
         }
     }
 
