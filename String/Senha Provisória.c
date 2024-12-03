@@ -5,7 +5,7 @@ int main(){
     char senha[21];
 
     scanf("%d", &N);
-    while(getchar() != '\n');
+    getchar();
     
     for(int i = 0; i < N; i++){
         printf("Informe a senha %d: ", i + 1);
