@@ -16,6 +16,7 @@ int main(){
     for(int l = 0; l < 12;l++){
         for(int c = 0; c < 12 - l - 1;c++){
             soma += M[l][c];
+            cont++;
         }
     }
     if(O == 'S'){
