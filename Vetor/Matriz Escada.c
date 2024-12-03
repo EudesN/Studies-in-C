@@ -24,9 +24,12 @@ int main(){
         }
     }
     for(int i = 0; i < M;i++){
-        for(int j = 0; j < N; i++){
-            
+        for(int j = 0; j < c_pivo[i]; i++){
+            if(matriz[i][j] != 0){ // se os elementos antes(a esqueda) dos pivos forem direfente de 0 essa matriz não é escada 
+                printf("N\n");
+            }
         }
     }
+    
     return 0;
 }
