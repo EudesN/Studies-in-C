@@ -23,6 +23,13 @@ int main(){
             }
         }
     }
+    // verificar se não há elementos diferente de 0 abaixo dos pivos
+    for(int i = 0; i < M; i++){
+        for(int j = 0; j < N;j++){
+            
+        }
+    }
+
     for(int i = 0; i < M;i++){
         for(int j = 0; j < c_pivo[i]; i++){
             if(matriz[i][j] != 0){ // se os elementos antes(a esqueda) dos pivos forem direfente de 0 essa matriz não é escada 
@@ -30,6 +37,17 @@ int main(){
             }
         }
     }
-    
+    int soma = 0; // inica a var soma para soma as linhas, se permanecer 0 a linha so possui elementos 0
+    for(int i = 0; i < M;i++){
+        for(int j =0; j < N;j++){
+            soma += matriz[i][j];
+            if(soma != 0){
+                printf("N\n");
+                return 0;
+            }
+        }
+    }
+
+    printf("S\n");
     return 0;
 }
