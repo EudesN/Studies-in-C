@@ -12,7 +12,7 @@ int main(){
         }
     }
 
-    for(int i =0; i < M; i++){
+    for(int i = 0; i < M; i++){
         val = 1; // cada linha percorrida já inicia como válida
         for(int j = 0; j < N; j++){
             if(matriz[i][j] == 0){
