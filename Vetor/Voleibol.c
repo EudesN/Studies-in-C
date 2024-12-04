@@ -8,8 +8,6 @@ int main(){
     char nomes[n_jog][100];
     int dados[2][3]; // linhas correspondem a cada jogador e as colunas aos dados de cada jogador(saque, bloqueios e ataques)
 
-
-
 do{
     scanf("%s", nomes[cont]); // lê o nome do jogador e armazena em um vetor separado
     cont++;
