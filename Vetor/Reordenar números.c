@@ -3,7 +3,7 @@
 int main(){
     int tam;
 
-    printf("Informe o número de elementos no vetor: ");
+    printf("Informe o numero de elementos no vetor: ");
     scanf("%d", &tam);
     int vetor[tam];
 
@@ -22,7 +22,6 @@ for(int i = 0; i < tam; i++){
             vetor[j] = vetor[j + 1];
             vetor[j + 1] = mudar;
             entrou = 1;
-
         }
     }
     x--;
