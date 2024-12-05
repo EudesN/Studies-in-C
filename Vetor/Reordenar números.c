@@ -15,7 +15,7 @@ int x = tam - 1, mudar; //x começa como a ultima posição do vetor e diminui a
 // mudar é o armazenamento temporario para a troca de valores
 
 for(int i = 0; i < tam; i++){
-    int entrou = 0;
+    int entrou = 0; // verifica se houve troca nesta passagem. Se não houver, o algoritmo para, pois o vetor já está ordenado.
     for(int j = 0; j < x; j++){
         if(vetor[j] > vetor[j + 1]){
             mudar = vetor[j];
