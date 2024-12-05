@@ -11,7 +11,7 @@ for(int i = 0; i < tam; i++){
     scanf("%d", &vetor[i]);
 }
 // variáveis auxiliares
-int x = tam - 1, mudar; //x começa como a ultima posição do vetor e diminui a cada interação
+int x = tam - 1, mudar; //x começa como a ultima posição do vetor e diminui a cada interação pois os maiores elementos vão subindo
 // mudar é o armazenamento temporario para a troca de valores
 
 for(int i = 0; i < tam; i++){
@@ -19,7 +19,7 @@ for(int i = 0; i < tam; i++){
     for(int j = 0; j < x; j++){
         if(vetor[j] > vetor[j + 1]){
             mudar = vetor[j];
-            vetor[j] == vetor[j + 1];
+            vetor[j] = vetor[j + 1];
             vetor[j + 1] = mudar;
             entrou = 1;
 
