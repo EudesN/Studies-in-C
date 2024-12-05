@@ -8,13 +8,11 @@ int main(){
     for(len = 0; str[len] != '\0';len++);
 
     for(int i = 0; i < len / 2; i++){
-        if(str[i] == str[len - i] - 1){
-            if(cont == len){
-                printf("É um palíndromo!");
-                return 0;
-                }
-            }
+        if(str[i] == str[len - i - 1]){
+            printf("E um palindromo!\n");
+            return 0;
+        }
     }
-    printf("Não é um palíndromo!");
+    printf("Nao e um palindromo!\n");
     return 0;
 }
