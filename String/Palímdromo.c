@@ -8,7 +8,7 @@ int main(){
     for(len = 0; str[len] != '\0';len++);
 
     for(int i = 0; i < len; i++){
-        for(int j = len; j > 0; j++){
+        for(int j = len - 1; j > 0; j++){
             if(str[i] == str[j]){
                 cont++;
                 if(cont == len){
