@@ -16,6 +16,11 @@ int main(){
         n1 = n2;
         n1 = r;
     }
-    printf("%d", n2);
+    if(n1 < n3){
+        r = n1;
+        n1 = n3;
+        n1 = r;
+    }
+    printf("%d", n3);
     return 0;
 }
