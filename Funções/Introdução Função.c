@@ -13,6 +13,6 @@ int main(){
     scanf("%f", &y);
 
     area = calAreaRetan(x, y);  
-    printf("A area do retangulo e: %f", area);
+    printf("A area do retangulo e: %.1f", area);
     return 0;
 }
