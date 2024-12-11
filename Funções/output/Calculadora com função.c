@@ -18,8 +18,11 @@ int main(){
     float a, b, res;
     char op;
 
+    printf("Digite o primeiro numero: ");
     scanf("%f", &a);
+    printf("Digite o segundo numero: ");
     scanf("%f", &b);
+    printf("Informe a operacao: ");
     scanf(" %c", &op);
 
     if(op == '+'){
