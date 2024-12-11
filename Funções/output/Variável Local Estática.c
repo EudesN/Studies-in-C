@@ -9,5 +9,6 @@ void teste(void){
 int main(){
     teste();
     teste();
+    teste();
     return 0;
 }
