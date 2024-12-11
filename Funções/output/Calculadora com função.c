@@ -12,6 +12,9 @@ float OpMult(float x, float y){
 float OpSub(float x, float y){
     return x - y;
 }
+float OpPorc(float x, float y){
+    return (x * y) / 100;
+}
 
 int main(){
 
@@ -27,19 +30,26 @@ int main(){
 
     if(op == '+'){
         res = OpSoma(a, b);
-        printf("%.1f", res);
+        printf("%.1f\n", res);
     }
     else if(op == '-'){
         res = OpSub(a, b);
-        printf("%.1f", res);
+        printf("%.1f\n", res);
     }
     else if(op == '*'){
         res = OpMult(a, b);
-        printf("%.1f", res);
+        printf("%.1f\n", res);
     }
     else if(op == '/'){
         res = OpDiv(a, b);
-        printf("%.1f", res);
+        printf("%.1f\n", res);
+    }
+    else if(op == '%'){
+        res = OpPorc(a, b);
+        printf("%.1f\n", res);
+    }
+    else{
+        printf("Opcao invalida\n");
     }
     return 0;
 }
