@@ -3,6 +3,7 @@
 float varAbsolut(float x){
     return x * -1;
 }
+
 float somaDig(float num1, float num2){
     float varAbsolut(float x);
     if(num1 < 0){
@@ -15,11 +16,11 @@ float somaDig(float num1, float num2){
 }
 
 int main(){
-
     float a, b, soma;
+
     scanf("%f", &a);
     scanf("%f", &b);
     soma = somaDig(a, b);
-    printf("A soma e: %f", soma);
+    printf("A soma e: %.1f", soma);
     return 0;
 }
