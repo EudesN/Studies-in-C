@@ -5,8 +5,9 @@ int gVarGlobal = 3; // uma variavel global é visível tanto para a função mai
 void teste(void){
     static int varLocalEstat = 2; 
     varLocalEstat *= 2;
-    printf("%i\n", gVarGlobal);
-    printf("%i\n", varLocalEstat);
+    gVarGlobal *= 2;
+    printf("variavel global: %i\n", gVarGlobal);
+    printf("variavel estatica: %i\n", varLocalEstat);
 }
 
 int main(){
