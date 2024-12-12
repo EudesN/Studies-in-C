@@ -3,8 +3,9 @@
 void funPrint(int X[][3]){ // no mínimo a segunda parte da matriz é necessário informar, caso contrario gera erro
     for(int i = 0; i < 3;i++){
         for(int j = 0; j < 3;j++){
-            printf("%d", X[i][j]);
+            printf(" %d ", X[i][j]);
         }
+        printf("\n");
     }
 }
 int main(){
