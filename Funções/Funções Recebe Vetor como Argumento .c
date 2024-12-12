@@ -13,6 +13,7 @@ void OrdCresc(int vetor[], int n){
         }
     }
 }
+
 int main(){
     int vetor[]= {6, 4, 1, 9, 8, 0, 5, 7, 3, 2};
     int i;
@@ -22,3 +23,4 @@ int main(){
     for(int i = 0; i < 10;i++){
         printf("%i", vetor[i]);
     }
+}
