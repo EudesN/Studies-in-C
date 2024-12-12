@@ -1,7 +1,7 @@
 # include <stdio.h>
 
 int main(){
-    struct horario
+    struct horario // definição de uma estrutura
     {
         int horas;
         int min;
@@ -10,6 +10,7 @@ int main(){
     };
 
     struct horario agora; // declaração de uma estrutura do tipo 'horário' chamada 'agora'
+    // iniciação dos membros das var da estrutura
     agora.horas = 15;
     agora.min = 17;
     agora.seg = 30;
