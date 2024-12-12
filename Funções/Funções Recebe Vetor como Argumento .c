@@ -9,7 +9,7 @@ void OrdCresc(int vetor[], int n){
                 temp = vetor[i];
                 vetor[i] = vetor[j];
                 vetor[j] = vetor[i];
-            }
+            }   
         }
     }
 }
