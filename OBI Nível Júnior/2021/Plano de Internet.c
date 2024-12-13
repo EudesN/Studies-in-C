@@ -12,14 +12,8 @@ int main(){
         scanf("%d", &M[i]);
     }
     for(int i = 0;i < N;i++){
-        if(i == 1){
-            R = 0;
-        }
-        else{
-            R = S - M[i];
-        }
-        S = X + R;
+        S = X - M[i];
     }
-    printf("%d", R);
+    printf("%d", S);
     return 0;
 }
