@@ -2,7 +2,7 @@
 
 int main(){
     int X, N;
-    int R, S;
+    int R = 0, S;
 
     scanf("%d", &X);
     scanf("%d", &N);
@@ -12,7 +12,8 @@ int main(){
         scanf("%d", &M[i]);
     }
     for(int i = 0;i < N;i++){
-        S = X - M[i];
+        S += X;
+        S = S - M[i];
     }
     printf("%d", S);
     return 0;
