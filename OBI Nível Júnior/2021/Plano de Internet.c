@@ -16,5 +16,5 @@ int main(){
         S -= M[i];
     }
     printf("%d\n", X + S);
-    return 0;
+    return 0;   
 }
