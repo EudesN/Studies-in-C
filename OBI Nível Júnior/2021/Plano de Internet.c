@@ -15,6 +15,6 @@ int main(){
         S = S + X;
         S = S - M[i];
     }
-    printf("%d", S);
+    printf("%d\n", 100 + S);
     return 0;
 }
