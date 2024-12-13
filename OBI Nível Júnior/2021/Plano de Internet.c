@@ -2,7 +2,7 @@
 
 int main(){
     int X, N;
-    int R = 0, S;
+    int R, S;
 
     scanf("%d", &X);
     scanf("%d", &N);
@@ -20,6 +20,6 @@ int main(){
         }
         S = X + R;
     }
-    printf("%d", S);
+    printf("%d", R);
     return 0;
 }
