@@ -12,7 +12,7 @@ int main(){
         scanf("%d", &M[i]);
     }
     for(int i = 0;i < N;i++){
-        S += X;
+        S = S + X;
         S = S - M[i];
     }
     printf("%d", S);
