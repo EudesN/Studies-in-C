@@ -11,7 +11,8 @@ struct horario teste(struct horario x){
 }
 int main(){
 
-
+    struct horario teste();
+    
     struct horario agora;
     agora.horas = 10;
     agora.min = 42;
