@@ -12,9 +12,9 @@ int main(){
         scanf("%d", &M[i]);
     }
     for(int i = 0;i < N;i++){
-        S = S + X;
-        S = S - M[i];
+        S += X;
+        S -= M[i];
     }
-    printf("%d\n", 100 + S);
+    printf("%d\n", X + S);
     return 0;
 }
