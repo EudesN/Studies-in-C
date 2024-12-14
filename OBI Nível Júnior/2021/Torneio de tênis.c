@@ -5,11 +5,12 @@ int main(){
     char part;
 
     for(int i = 0; i < 6;i++){
-        scanf("%c", &part);
+        scanf(" %c", &part);
         if(part == 'v'){
             v++;
         }
     }
+
     if(v == 5 || v == 6){
         printf("1\n");
     }
