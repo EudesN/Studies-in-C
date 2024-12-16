@@ -43,7 +43,6 @@
         else{
             printf("N\n");
         }
-        // printf("%s\n", P1);
-        // printf("%s\n", P2);
+        
         return 0;
     }
