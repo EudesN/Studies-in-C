@@ -1,7 +1,7 @@
     # include <stdio.h>
 
     int main(){
-        int N, cont = 0;
+        int N, cont = 0, len1, len2;
         scanf(" %d", &N);
         getchar();
         char P1[N + 1], P2[N + 1];
@@ -16,6 +16,7 @@
             }
         }
         getchar();
+        for(len1 = 0; P1[len1] != '\0'; len1++)
 
         printf("Informe o segunda palavra: ");
         fgets(P2, sizeof(P2), stdin);
@@ -27,7 +28,7 @@
             }
         }
         getchar();
-
+        for(len = 0)
         for(int i = 0; i < sizeof(P1);i++){
             for(int j = sizeof(P2 - i); j > 0; j--){
                 if(P1[i] == P2[j]){
