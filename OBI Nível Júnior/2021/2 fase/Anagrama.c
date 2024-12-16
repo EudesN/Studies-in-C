@@ -1,7 +1,7 @@
     # include <stdio.h>
 
     int main(){
-        int N;
+        int N, cont = 0;
         scanf(" %d", &N);
         getchar();
         char P1[N + 1], P2[N + 1];
@@ -27,8 +27,21 @@
             }
         }
         getchar();
-        
-        printf("%s\n", P1);
-        printf("%s\n", P2);
+
+        for(int i = 0; i < sizeof(P1);i++){
+            for(int j = sizeof(P2 - i); j > 0; j--){
+                if(P1[i] == P2[j]){
+                    cont++;
+                }
+            }
+        }
+        if(cont == sizeof(P1) && cont == sizeof(P2)){
+            printf("S\n");
+        }
+        else{
+            printf("N\n");
+        }
+        // printf("%s\n", P1);
+        // printf("%s\n", P2);
         return 0;
     }
