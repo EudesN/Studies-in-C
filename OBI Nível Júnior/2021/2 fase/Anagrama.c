@@ -16,7 +16,7 @@
             }
         }
         getchar();
-        for(len1 = 0; P1[len1] != '\0'; len1++)
+        for(len1 = 0; P1[len1] != '\0'; len1++);
 
         printf("Informe o segunda palavra: ");
         fgets(P2, sizeof(P2), stdin);
@@ -28,15 +28,16 @@
             }
         }
         getchar();
-        for(len = 0)
-        for(int i = 0; i < sizeof(P1);i++){
-            for(int j = sizeof(P2 - i); j > 0; j--){
+        for(len2 = 0; P2[len2] != '\0';len2++);
+
+        for(int i = 0; i < len1; i++){
+            for(int j = len2 - i; j > 0; j--){
                 if(P1[i] == P2[j]){
                     cont++;
                 }
             }
         }
-        if(cont == sizeof(P1) && cont == sizeof(P2)){
+        if(cont == len2 && cont == len2){
             printf("S\n");
         }
         else{
