@@ -4,7 +4,7 @@ int main(){
     int N;
     scanf("%d", &N);
     getchar();
-    char P1[N], P2[N];
+    char P1[N + 1], P2[N + 1];
     fgets(P1, sizeof(P1), stdin);
     for(int i = 0; P1[i] != '\0';i++){
         if(P1[i]== '\n'){
