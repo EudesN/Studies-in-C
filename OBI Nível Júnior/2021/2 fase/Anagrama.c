@@ -1,25 +1,31 @@
-#include <stdio.h>
-#include <string.h>
+    # include <stdio.h>
 
-int main() {
-    int N;
-    scanf("%d", &N);
-    getchar(); // Remove o '\n' restante no buffer após ler N
+    int main(){
+        int N;
+        scanf(" %d", &N);
+        getchar();
+        char P1[N + 1], P2[N + 1];
 
-    char P1[N + 1], P2[N + 1];
+        printf("Informe o primeira palavra: ");
+        fgets(P1, sizeof(P1), stdin);
 
-    // Lendo a primeira string
-    fgets(P1, N + 1, stdin);
-    P1[strcspn(P1, "\n")] = '\0'; // Remove o '\n' (se existir)
-    getchar(); // Remove qualquer caractere residual no buffer (como o '\n')
+        for(int i = 0; P1[i] != '\0';i++){
+            if(P1[i]== '\n'){
+                P1[i] = '\0';
+                break;
+            }
+        }
+        printf("Informe o segunda palavra: ");
+        fgets(P2, sizeof(P2), stdin);
 
-    // Lendo a segunda string
-    fgets(P2, N + 1, stdin);
-    P2[strcspn(P2, "\n")] = '\0'; // Remove o '\n' (se existir)
+        for(int i = 0; P2[i] != '\0';i++){
+            if(P2[i]== '\n'){
+                P2[i] = '\0';
+                break;
+            }
+        }
 
-    // Imprime as duas strings
-    printf("%s\n", P1);
-    printf("%s\n", P2);
-
-    return 0;
-}
+        printf("%s\n", P1);
+        printf("%s\n", P2);
+        return 0;
+    }
