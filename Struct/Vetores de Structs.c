@@ -14,5 +14,6 @@ int main(){
     teste[0].seg = 30;
 
     printf("%i : %i : %i\n", teste[0].horas, teste[0].min, teste[0].seg);
+    
     return 0; 
 }
