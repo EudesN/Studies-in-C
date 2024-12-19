@@ -5,7 +5,9 @@ int main(){
         int horas;
         int min;
         int seg;
-    }agora = {10, 30, 16};
-    
+    };
+    struct horario agora = {10, 30, 16};
+
     printf("%i %i %i", agora.horas, agora.min, agora.seg);
+    return 0;
 }
