@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-    struct horario{
+    struct horario{ // declaração global da estutura do tipo 'horario'
         int horas;
         int min;
         int seg;
@@ -8,8 +8,8 @@
 
 struct horario teste(struct horario x){
     printf("%i:%i:%i\n", x.horas, x.min, x.seg);
-    x.horas = 18;
-    x.min = 56;
+    x.horas = 00;
+    x.min = 01;
     x.seg = 03;
     return x;
 }
