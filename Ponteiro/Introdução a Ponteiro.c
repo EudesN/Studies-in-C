@@ -7,7 +7,10 @@ int main(){
     int *ponteiro;
     ponteiro  = &x;
 
-    printf("%i\n", *ponteiro); // com asterico (*) é possível acessar o valor que está no endereço de memória que o ponteiro está apontando
+    int y = 20;
+    *ponteiro = y; // o valor de x é alterado para 20
+
+    printf("%i %i\n", x, y); // com asterico (*) é possível acessar o valor que está no endereço de memória que o ponteiro está apontando
 // sem asterisco (*) é possível acessar o endereço de memória que o ponteiro está apontando
 
     return 0;
