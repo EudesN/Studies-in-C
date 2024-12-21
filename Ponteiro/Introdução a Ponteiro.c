@@ -7,8 +7,8 @@ int main(){
     int *ponteiro;
     ponteiro  = &x;
 
-    printf("%i\n", *ponteiro);
+    printf("%i\n", *ponteiro); // com asterico (*) é possível acessar o valor que está no endereço de memória que o ponteiro está apontando
+// sem asterisco (*) é possível acessar o endereço de memória que o ponteiro está apontando
 
-    // printf("%i\n", &x); // o '&' é o operador de endereço, ele retorna o endereço de memória da variável x
     return 0;
 }
