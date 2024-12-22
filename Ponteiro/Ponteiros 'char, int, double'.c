@@ -9,6 +9,6 @@ int main(){
     // double pY = &y;
     // char *pZ = &z;
 
-    printf("Endereço x = %d - Valor  x = %i\n", pX, *pX );
+    printf("Endereço x = %p - Valor  x = %i\n", pX, *pX );
     return 0;
 }
