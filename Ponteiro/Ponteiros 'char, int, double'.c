@@ -10,7 +10,7 @@ int main(){
     char *pZ = &z;
 
     printf("Endereço x = %p - Valor  x = %d\n", (void*)pX, *pX );
-    printf("Endereço y = %p - Valor y = %lf\n", (void*)pY, *pY);
+    printf("Endereço y = %p - Valor y = %f\n", (void*)pY, *pY);
     printf("Endereço z = %p - Valor z = %c\n", (void*)pZ, *pZ);
 
     return 0;
