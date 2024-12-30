@@ -8,7 +8,7 @@ int main(){
         int seg;
     };
     struct horario agora, *depois;
-    depois = &agora
+    depois = &agora;
     depois = &agora;
     depois -> hora = 20; // há uma ordem de precedência nos sinais. Ponto é executado antes do asterísco pelo compilador
     depois -> min = 20; // outra maneira de escrever
