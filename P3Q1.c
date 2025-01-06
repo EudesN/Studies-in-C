@@ -16,11 +16,9 @@ int main(){
         }
     }
 
-    printf("Faltas em cada mes:\n");
+    printf("\nFaltas em cada mes:\n");
     for(int c = 0; c < 12; c++){
-        for(int l = 0; l < 50; l++){
-            printf("Mes %d: %d\n", c + 1, faltasMes[c]);
-        }
+            printf("Mes %d: %d faltas\n", c + 1, faltasMes[c]);
     }
 
     // total de faltas de cada aluno
@@ -29,12 +27,12 @@ int main(){
             faltasAluno[l] += M[l][c];
         }
     }
-    printf("Faltas por aluno:\n");
+
+    printf("\nFaltas por aluno:\n");
     for(int l = 0; l < 50; l++){
-        for(int c = 0; c < 12; c++){
-            printf("Aluno %d: %d\n", l + 1, faltasAluno[l]);
-        }
+            printf("Aluno %d: %d faltas\n", l + 1, faltasAluno[l]);
     }
+
     // qual ou quais alunos tiveram o maior número de faltas
     printf("Aluno(s) com maior numero de faltas:\n");
     int maior = 0;
@@ -43,6 +41,7 @@ int main(){
             maior = faltasAluno[i];
         }
     }
+    
     for(int i = 0; i < 50; i++){
         if(faltasAluno[i] == maior){
             printf("Aluno %d\n", i + 1);
