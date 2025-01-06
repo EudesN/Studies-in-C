@@ -16,6 +16,9 @@ int main(){
     hoje.pMin = &min;
     hoje.pSeg = &seg;
 
-    printf("%i %i %i\n", )
+    printf("hora - %i\n", *hoje.pHora);
+    printf("minuto - %i\n", *hoje.pMin);
+    printf("segundo - %i\n", *hoje.pSeg);
+
     return 0;
 }
