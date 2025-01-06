@@ -9,7 +9,7 @@ int main(){
     };
     struct horario agora, *depois;
     depois = &agora;
-    
+
     depois -> hora = 20; // há uma ordem de precedência nos sinais. Ponto é executado antes do asterísco pelo compilador
     depois -> min = 20; // outra maneira de escrever
     depois -> seg = 20;
@@ -21,7 +21,7 @@ int main(){
     antes.hora = somatorio + depois -> seg;
     antes.min = agora.hora + depois -> min;
     
-    printf("%i:%i:%i", agora.hora, agora.min, agora.seg);
+    printf("%i:%i:%i", antes.hora, antes.min, antes.seg);
     
     return 0;
 }
