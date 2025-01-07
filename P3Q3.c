@@ -16,9 +16,9 @@ void CadastroHotel(struct info hot[], int *quant){
         return;
     }
     
-    printf("hotel %d\n", quant);
+    printf("hotel %d\n", *quant + 1);
     printf("Codigo: ");
-    scanf("%d", codigo);
+    scanf("%d", &codigo);
 
 // verificar se o código já não foi cadastrado
     for(int i = 0; i < *quant; i++){
@@ -30,10 +30,10 @@ void CadastroHotel(struct info hot[], int *quant){
     hot[*quant].codigo = codigo; // adicionar código ao vetor que armazana os códigos
 
     printf("Informe a distancia do centro (km): ");
-    scanf("%f", hot[*quant].Dist);
+    scanf("%f", &hot[*quant].Dist);
 
     printf("Informe o acesso(0-Não asfaltado 1-Asfaltado): ");
-    scanf("%d", hot[*quant].Acesso);
+    scanf("%d", &hot[*quant].Acesso);
 
     (*quant)++;
     printf("Hotel Cadastrado com sucesso!\n");
@@ -51,7 +51,7 @@ void Hoteis15(struct info hot[], int quant){
 void Consulta(int codigo, struct info hot[], int quant){
     for(int i = 0; i < quant; i++){
         if(hot[i].codigo == codigo){
-            printf("Distancia do centro: %dkm", hot[i].Dist);
+            printf("Distancia do centro: %fkm", hot[i].Dist);
             if(hot[i].Acesso == 1){
                 printf("Acesso asfaltado\n");
             }
@@ -86,7 +86,7 @@ int main(){
             break;
         case 3:
             printf("Pesquisa pelo codigo: ");
-            scanf("%d", cod);   
+            scanf("%d", &cod);   
             Consulta(cod, hot, quant);
             break;
         case 0:
