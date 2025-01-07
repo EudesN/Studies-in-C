@@ -40,8 +40,17 @@ void CadastroHotel(struct info hot[], int *quant){
 }
 
 void Hoteis15(struct info hot[], int quant){
-    
+    prinf("Os Hoteis com > 15km sao: ");
+    for(int i = 0; i < quant; i++){
+        if(hot[i].Dist > 15.0){
+            printf("%f", hot[i].Dist);
+        }
+    }
 }
+
+void Consulta(int codigo, struct info hot[], int quant){
+    
+} 
 
 int main(){
     struct info hot[Max]; // vetor de hoteis que armazena as informações
@@ -63,7 +72,12 @@ int main(){
             CadastroHotel( hot, &quant);
             break;
         case 2:
-            
+            Hoteis15(hot, quant);
+            break;
+        case 3:
+            printf("Pesquisa pelo codigo: ");
+            scanf("%d", cod);   
+            Consulta(cod, hot, quant);
         default:
             break;
         }
