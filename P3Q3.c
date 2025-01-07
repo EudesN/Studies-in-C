@@ -30,17 +30,17 @@ void CadastroHotel(struct info hot[], int *quant){
     hot[*quant].codigo = codigo; // adicionar código ao vetor que armazana os códigos
 
     printf("Informe a distancia do centro (km): ");
-    scanf("%d", hot[*quant].Dist);
+    scanf("%f", hot[*quant].Dist);
 
     printf("Informe o acesso(0-Não asfaltado 1-Asfaltado): ");
     scanf("%d", hot[*quant].Acesso);
 
-    *quant++;
+    (*quant)++;
     printf("Hotel Cadastrado com sucesso!\n");
 }
 
 void Hoteis15(struct info hot[], int quant){
-    prinf("Os Hoteis com > 15km sao: ");
+    printf("Os Hoteis com > 15km sao: ");
     for(int i = 0; i < quant; i++){
         if(hot[i].Dist > 15.0){
             printf("%f", hot[i].Dist);
@@ -49,7 +49,17 @@ void Hoteis15(struct info hot[], int quant){
 }
 
 void Consulta(int codigo, struct info hot[], int quant){
-    
+    for(int i = 0; i < quant; i++){
+        if(hot[i].codigo == codigo){
+            printf("Distancia do centro: %dkm", hot[i].Dist);
+            if(hot[i].Acesso == 1){
+                printf("Acesso asfaltado\n");
+            }
+            else{
+                printf("Acesso nao asfaltado\n");
+            }
+        }
+    }
 } 
 
 int main(){
@@ -78,10 +88,12 @@ int main(){
             printf("Pesquisa pelo codigo: ");
             scanf("%d", cod);   
             Consulta(cod, hot, quant);
-        default:
             break;
+        case 0:
+            printf("Fim do programa\n");
+        default:
+            printf("Opcao Invalida\n");
         }
     }while( resp != 0);
-    printf("Fim do programa\n");
     return 0;
 }
