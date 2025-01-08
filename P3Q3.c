@@ -72,7 +72,7 @@ int main(){
         printf("1- Cadastrar um hotel\n");
         printf("2- Hoteis com < 15Km até o centro\n");
         printf("3- Consultar\n");
-        printf("4- Sair");
+        printf("4- Sair\n");
         printf("Informe uma opcao: ");
         scanf("%d", &resp);
 
