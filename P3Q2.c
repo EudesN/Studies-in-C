@@ -1,5 +1,5 @@
 #include <stdio.h>
-    typedef struct aluno{
+    typedef struct aluno{ // typedef é utilizado para criar um apelido pro tipo de dados - tAluno que é equivalente à estrutura struct aluno
         int matricula;
         float notaP1;
         float notaP2;
@@ -22,9 +22,9 @@ float calculaNota(tAluno aluno){
 }
 
 int main(){
-    tAluno aluno; // mesma coisa q 'struct aluno aluno'
+    tAluno aluno; // declaração da var aluno do tipo tAluno - mesma coisa q 'struct aluno aluno'
     
-    insereDados(&aluno);
+    insereDados(&aluno); 
 
     float nota3 = calculaNota(aluno);
 
