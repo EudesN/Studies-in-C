@@ -8,14 +8,13 @@
     }tHotel;
 
 void CadastroHotel(tHotel hot[], int *quant){
-    int codigo;
+    int codigo; // var temporaria q armazena o código 
 
 // verifica se o número máximo de hoteis que podem ser cadastrados foi atingido
     if(*quant >= Max){
         printf("Limite de cadastro atingido!\n");
         return;
     }
-    
     printf("hotel %d\n", *quant + 1);
     printf("Codigo: ");
     scanf("%d", &codigo);
@@ -32,8 +31,10 @@ void CadastroHotel(tHotel hot[], int *quant){
     printf("Informe a distancia do centro (km): ");
     scanf("%f", &hot[*quant].Dist);
 
-    printf("Informe o acesso(0-Não asfaltado 1-Asfaltado): ");
-    scanf("%d", &hot[*quant].Acesso);
+    do{
+        printf("Informe o acesso(0-Não asfaltado 1-Asfaltado): ");
+        scanf("%d", &hot[*quant].Acesso);
+    }while(hot[*quant].Acesso < 0 || hot[*quant].Acesso > 1);
 
     (*quant)++;
     printf("Hotel Cadastrado com sucesso!\n");
@@ -51,7 +52,7 @@ void Hoteis15(tHotel hot[], int quant){
 void Consulta(int codigo, tHotel hot[], int quant){
     for(int i = 0; i < quant; i++){
         if(hot[i].codigo == codigo){
-            printf("Distancia do centro: %fkm", hot[i].Dist);
+            printf("Distancia do centro: %fkm\n", hot[i].Dist);
             if(hot[i].Acesso == 1){
                 printf("Acesso asfaltado\n");
             }
