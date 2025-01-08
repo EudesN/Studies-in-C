@@ -1,32 +1,32 @@
 #include <stdio.h>
-    struct aluno{
+    typedef struct aluno{
         int matricula;
         float notaP1;
         float notaP2;
-    };
+    }tAluno;
 
-void insereDados(struct aluno *tAluno){
+void insereDados(tAluno *aluno){
     printf("Informe o a matricula: ");
-    scanf("%d", &tAluno -> matricula);
+    scanf("%d", &aluno -> matricula);
 
     printf("Informe a primeira nota: ");
-    scanf("%f", &tAluno -> notaP1);
+    scanf("%f", &aluno -> notaP1);
 
     printf("Informe a segunda nota: ");
-    scanf("%f", &tAluno -> notaP2);
+    scanf("%f", &aluno -> notaP2);
 }
 
-float calculaNota(struct aluno tAluno){
-    float precisaNota = 21 - (tAluno.notaP1 + tAluno.notaP2);
+float calculaNota(tAluno aluno){
+    float precisaNota = 21 - (aluno.notaP1 + aluno.notaP2);
     return precisaNota;
 }
 
 int main(){
-    struct aluno tAluno;
+    tAluno aluno; // mesma coisa q 'struct aluno aluno'
+    
+    insereDados(&aluno);
 
-    insereDados(&tAluno);
-
-    float nota3 = calculaNota(tAluno);
+    float nota3 = calculaNota(aluno);
 
     if(nota3 <= 10){
         printf("Para passar precisa tirar ao menos: %.1f\n", nota3);
