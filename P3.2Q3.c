@@ -10,10 +10,10 @@
     int ConsultaLivro();
     void MostrarEstoque();
     void CadastrarLivro();
-    
+
 int main(){
     tLivro livros[500];
-    int quant = 0;
+    int quant = 0; // quantidade de livros que a biblioteca possui
     int resp, cod;
 
     do{
