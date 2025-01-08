@@ -24,9 +24,9 @@ float calculaNota(tAluno aluno){
 int main(){
     tAluno aluno; // declaração da var aluno do tipo tAluno - mesma coisa q 'struct aluno aluno'
     
-    insereDados(&aluno); 
+    insereDados(&aluno); // passa o endereço de memoria da var aluno permitindo modificar diretamente os campos aluno
 
-    float nota3 = calculaNota(aluno);
+    float nota3 = calculaNota(aluno); // passa uma cópia de da struct aluno 
 
     if(nota3 <= 10){
         printf("Para passar precisa tirar ao menos: %.1f\n", nota3);
