@@ -1,13 +1,13 @@
 #include <stdio.h>
 #define Max 50
 
-    struct info{
+    typedef struct info{
         int codigo;
         float Dist;
         int Acesso; // 0-acesso não asfaltado e 1- acesso asfaltado
-    };
+    }tHotel;
 
-void CadastroHotel(struct info hot[], int *quant){
+void CadastroHotel(tHotel hot[], int *quant){
     int codigo;
 
 // verifica se o número máximo de hoteis que podem ser cadastrados foi atingido
@@ -39,7 +39,7 @@ void CadastroHotel(struct info hot[], int *quant){
     printf("Hotel Cadastrado com sucesso!\n");
 }
 
-void Hoteis15(struct info hot[], int quant){
+void Hoteis15(tHotel hot[], int quant){
     printf("Os Hoteis com > 15km sao: ");
     for(int i = 0; i < quant; i++){
         if(hot[i].Dist > 15.0){
@@ -48,7 +48,7 @@ void Hoteis15(struct info hot[], int quant){
     }
 }
 
-void Consulta(int codigo, struct info hot[], int quant){
+void Consulta(int codigo, tHotel hot[], int quant){
     for(int i = 0; i < quant; i++){
         if(hot[i].codigo == codigo){
             printf("Distancia do centro: %fkm", hot[i].Dist);
@@ -63,7 +63,7 @@ void Consulta(int codigo, struct info hot[], int quant){
 } 
 
 int main(){
-    struct info hot[Max]; // vetor de hoteis que armazena as informações
+    tHotel hot[Max]; // vetor de hoteis que armazena as informações
     int resp; // opcao de escolha do menu
     int cod; // codigo para consulta
     int quant = 0; // quantidade de hoteis cadastrados
