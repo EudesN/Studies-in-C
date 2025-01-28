@@ -13,5 +13,13 @@ int main(){
     m2.valor = 20;
     m3.valor = 30;
 
+    m1.proximo = &m2;
+    m2.proximo = &m3;
+    m3.proximo = 0;
+
+    while(gancho != (struct lista*)0){
+        printf("%i\n",  gancho -> valor);
+        gancho = gancho -> proximo;
+    }
     return 0;
 }
