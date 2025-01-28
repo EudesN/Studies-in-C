@@ -19,7 +19,7 @@ int main(){
 
     while(gancho != (struct lista*)0){
         printf("%i\n",  gancho -> valor);
-        gancho = gancho -> proximo;
+        gancho = gancho -> proximo; 
     }
     return 0;
 }
