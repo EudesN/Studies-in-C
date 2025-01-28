@@ -7,6 +7,9 @@ int main(){
     int x = 1;
     int y = 0;
     
+    printf("X = %i", x);
+    printf("Y = %i", y);
+
 }
 
 
