@@ -5,7 +5,7 @@ int main (){
     int *ponteiro1 = &vetor; // o ponteiro está apontando para o endereço de memoria do primeiro membro do vetor
     int *ponteiro2 = & vetor[1];
 
-    printf("%i", ponteiro1);
-    printf("%i", ponteiro2);
+    printf("%i", *ponteiro1);
+    printf("%i", *ponteiro2);
     return 0;
 }
