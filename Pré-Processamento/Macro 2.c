@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define MAIOR(x, y) x > y ? x : y
+#define MAIOR(x, y) x > y ? x : y // É possivel utilizar operadores condicionais em macros
 #define E_MINUSCULO(char) char >= 'a' && char <= 'z' // 
 
 int main(){

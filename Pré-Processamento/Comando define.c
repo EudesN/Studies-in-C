@@ -4,7 +4,7 @@
 //as quais se iniciam com #.
 
 # include <stdio.h>
-# define SIM 100
+# define SIM 100 // o define é passado sem o ';' pois durante o pre-processamento ele sobustitui as partes com define pelo valor
 # define NAO 100
 
 int main(){
