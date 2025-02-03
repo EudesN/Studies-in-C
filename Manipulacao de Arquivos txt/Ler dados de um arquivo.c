@@ -21,8 +21,8 @@ int main(){
         exit(0);
     }
 
-    char frase[100];
-    while(fgets(frase, 100, sFile) != NULL){
+    char frase[300];
+    while(fgets(frase, 300, sFile) != NULL){
         printf("%s", frase);
     }
     fclose(sFile);
