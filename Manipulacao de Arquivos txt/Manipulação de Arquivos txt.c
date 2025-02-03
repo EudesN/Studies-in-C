@@ -10,8 +10,8 @@ int main(){
         return 1;
     }
     fprintf(file, "Exemplo de escrita em um arquivo usando C\n");
-
-    fclose(file);
+    fclose(file); // fecha o arquivo
+    
     printf("Arquivo criado com sucesso\n");
     return 0;
 }
