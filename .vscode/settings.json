@@ -2,5 +2,6 @@
     "files.associations": {
         "stdio.h": "c"
     },
-    "gitdoc.enabled": true
+    "gitdoc.enabled": true,
+    "C_Cpp.default.compilerPath": "C:/MinGW/bin/gcc.exe"
 }
