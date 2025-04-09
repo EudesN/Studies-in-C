@@ -77,7 +77,7 @@ void enqueue(Pessoa **inicio)
     } else{    //Ha espaco disponivel ainda
         //Preenche com dados a variavel *prox
         printf("Digite o nome da pessoa: ");
-        gets(prox->nome);
+        fgets(prox->nome, 50, stdin);
         prox->link = NULL;
 
         if(*inicio == NULL)    //Nao ha pessoas na fila ainda?
