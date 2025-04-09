@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>    //Para alocar e desalocar memoria
 #include <locale.h>    //Para adicionar caracteres do portugues
-#define LIMPA_TELA system("cls");    //Para limpar a tela
 
 //Definicao do tipo Pessoa
 typedef struct pessoa{
@@ -36,7 +35,6 @@ int main()
             scanf("%d%*c", &opcao);
         }
 
-        LIMPA_TELA
         switch(opcao)
         {
             case 1:
@@ -91,7 +89,6 @@ void enqueue(Pessoa **inicio){
             temp->link = prox;
         }
 
-        LIMPA_TELA
         printf("Fila atualizada: \n");
         imprimeFila(&inicio);
     }
