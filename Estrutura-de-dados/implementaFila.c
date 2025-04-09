@@ -125,11 +125,11 @@ void statusFila(Pessoa **inicio){
     int quantPessoas = 0;
 
     //Percorre a fila para descobrir quantas pessoas sao e quem sao elas
-    printf("As pessoas que estao na fila sao:\n\n");
+    printf("As pessoas que estao na fila sao: ");
 
     for(temp = *inicio; temp != NULL; temp = temp->link)
     {
-        printf("%s\n", temp->nome);
+        printf("%s ", temp->nome);
         quantPessoas++;
     }
 
@@ -140,12 +140,11 @@ void imprimeFila(Pessoa ***inicio){
     //A variavel temporaria acessa o inicio da fila 
     Pessoa *temp = **inicio;
     //A fila eh percorrida e cada elemento eh impresso na tela
-    while(temp != NULL)
-    {
+    while(temp != NULL){
         printf("%s -> ", temp->nome);
         temp = temp->link;
     }
-    printf("NULL\n\n");
+    printf("\n");
 }
 
 /*Apos todo o programa, a memoria alocada para a fila eh
