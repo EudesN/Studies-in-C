@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>    //Para alocar e desalocar memoria
 #include <locale.h>    //Para adicionar caracteres do portugues
-#define CONF_PORTUGUES setlocale(LC_ALL, "");    //Permite caracteres especiais em cada funcao 
 #define LIMPA_TELA system("clear");    //Para limpar a tela
 
 //Definicao do tipo Pessoa
@@ -12,7 +11,7 @@ typedef struct pessoa
     struct pessoa *link;    //Link para apontar para a proxima pessoa da fila
 } Pessoa;
 
-//Prototipos das funções
+//Prototipos das funcoes
 void exibeMenu();
 void enqueue(Pessoa **);
 void dequeue(Pessoa **);
@@ -22,23 +21,22 @@ void removeFila(Pessoa **);
 
 int main()
 {
-    CONF_PORTUGUES
-    
+
     Pessoa *inicio = NULL;    //Sinaliza o inicio da fila
     int opcao;    //Captura a opcao do usuario 
-    
+
     do
     {
         exibeMenu();    //O menu principal eh mostrado ao usuario
         scanf("%d%*c", &opcao);
-        
+
         //Em caso de opcao invalida
         while(opcao < 0 || opcao > 3)
         {
-            printf("DIGITE UMA OPÇÃO VÁLIDA: ");
+            printf("DIGITE UMA OPCAO VALIDA: ");
             scanf("%d%*c", &opcao);
         }
-        
+
         LIMPA_TELA
         switch(opcao)
         {
@@ -53,19 +51,11 @@ int main()
                 break;
         }
     } while(opcao != 0);
-    
+
     removeFila(&inicio);
     printf("Obrigado por vir. Volte sempre! ;)\n");
-    
-    return 0;
-}
 
-void exibeMenu()
-{
-    printf("%s\n\n%s\n%s\n%s\n%s\n\n%s",
-        "MENU PRINCIPAL", "(1) Adicionar pessoa à fila",
-        "(2) Remover pessoa da fila", "(3) Mostrar status da fila",
-        "(0) Sair", "SUA OPÇÃO: ");
+    return 0;
 }
 
 //A funcao enqueue(Pessoa **) sempre coloca alguem no final
@@ -74,22 +64,22 @@ void enqueue(Pessoa **inicio)
     //Mostra como esta a fila, para comparar o antes e depois
     printf("A fila antes:\n");
     imprimeFila(&inicio);
-    
+
     Pessoa *prox = NULL;
-    
+
     //Aloca memoria para a proxima pessoa da fila
     prox = (Pessoa *) malloc(sizeof(Pessoa));
-    
+
     if(prox == NULL)    //Nao ha mais espaco disponivel na memoria 
     {
-        printf("Não há mais memória disponível!\n\n");
+        printf("Nao ha mais memoria disponivel!\n\n");
         return;
     } else{    //Ha espaco disponivel ainda
         //Preenche com dados a variavel *prox
         printf("Digite o nome da pessoa: ");
         gets(prox->nome);
         prox->link = NULL;
-        
+
         if(*inicio == NULL)    //Nao ha pessoas na fila ainda?
             *inicio = prox;    //*inicio representara a primeira pessoa
         else    //Ja tem pessoas na fila?
@@ -102,7 +92,7 @@ void enqueue(Pessoa **inicio)
             //A nova pessoa eh anexada a ultima da fila
             temp->link = prox;
         }
-        
+
         LIMPA_TELA
         printf("A fila depois:\n");
         imprimeFila(&inicio);
@@ -110,8 +100,7 @@ void enqueue(Pessoa **inicio)
 }
 
 //A funcao dequeue(Pessoa **) sempre remove alguem do inicio 
-void dequeue(Pessoa **inicio)
-{
+void dequeue(Pessoa **inicio){
     if(*inicio == NULL)
     {
         printf("Impossivel remover pessoas de uma fila vazia!\n\n");
@@ -120,11 +109,11 @@ void dequeue(Pessoa **inicio)
         //Mostra a fila antes de retirar alguem
         printf("A fila antes:\n");
         imprimeFila(&inicio);
-        
+
         Pessoa *temp = *inicio;    //Um ponteiro auxiliar guarda o inicio
         *inicio = (*inicio)->link;    //O no do inicio avanca para o proximo elemento
-        free(temp);    //O endereço do antigo primeiro no eh devolvido ao sistema
-        
+        free(temp);    //O endereco do antigo primeiro no eh devolvido ao sistema
+
         //Mostra a fila depois de retirar alguem
         printf("A fila depois:\n");
         imprimeFila(&inicio);
@@ -133,25 +122,23 @@ void dequeue(Pessoa **inicio)
 
 /*A funcao statusFila(Pessoa **) lista as pessoas, da primeira a ultima
 e informa quantas ha*/
-void statusFila(Pessoa **inicio)
-{
+void statusFila(Pessoa **inicio){
     Pessoa *temp;
     int quantPessoas = 0;
-    
+
     //Percorre a fila para descobrir quantas pessoas sao e quem sao elas
-    printf("As pessoas que estão na fila são:\n\n");
-    
+    printf("As pessoas que estao na fila sao:\n\n");
+
     for(temp = *inicio; temp != NULL; temp = temp->link)
     {
         printf("%s\n", temp->nome);
         quantPessoas++;
     }
-    
-    printf("\nHá %d pessoas nessa fila.\n\n", quantPessoas);
+
+    printf("\nHa %d pessoas nessa fila.\n\n", quantPessoas);
 }
 
-void imprimeFila(Pessoa ***inicio)
-{
+void imprimeFila(Pessoa ***inicio){
     //A variavel temporaria acessa o inicio da fila 
     Pessoa *temp = **inicio;
     //A fila eh percorrida e cada elemento eh impresso na tela
@@ -168,12 +155,18 @@ devolvida ao sistema por removeFila(Pessoa **)*/
 void removeFila(Pessoa **inicio)
 {
     Pessoa *temp;
-    
+
     //Percorre a fila inteira
-    while(*inicio != NULL)
-    {
+    while(*inicio != NULL){
         temp = *inicio;    //A variavel temporaria acessa o inicio 
         *inicio = (*inicio)->link;    //O no inicial sempre avanca para o proximo
         free(temp);    //O no que era inicial eh devolvido ao sistema
     }
+}
+
+void exibeMenu(){
+    printf("%s\n\n%s\n%s\n%s\n%s\n\n%s",
+        "MENU PRINCIPAL", "(1) Adicionar pessoa a fila",
+        "(2) Remover pessoa da fila", "(3) Mostrar status da fila",
+        "(0) Sair", "SUA OPCAO: ");
 }
