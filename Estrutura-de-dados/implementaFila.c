@@ -1,7 +1,6 @@
 //Programa implementaFila.c
 #include <stdio.h>
 #include <stdlib.h>    //Para alocar e desalocar memoria
-#include <locale.h>    //Para adicionar caracteres do portugues
 
 //Definicao do tipo Pessoa
 typedef struct pessoa{
@@ -17,14 +16,11 @@ void statusFila(Pessoa **);
 void imprimeFila(Pessoa ***);
 void removeFila(Pessoa **);
 
-int main()
-{
-
+int main(){
     Pessoa *inicio = NULL;    //Sinaliza o inicio da fila
     int opcao;    //Captura a opcao do usuario 
 
-    do
-    {
+    do{
         exibeMenu();    //O menu principal eh mostrado ao usuario
         scanf("%d%*c", &opcao);
 
@@ -163,8 +159,12 @@ void removeFila(Pessoa **inicio)
 }
 
 void exibeMenu(){
-    printf("%s\n\n%s\n%s\n%s\n%s\n\n%s",
-        "MENU PRINCIPAL", "(1) Adicionar pessoa a fila",
-        "(2) Remover pessoa da fila", "(3) Mostrar status da fila",
-        "(0) Sair", "SUA OPCAO: ");
+    printf("------------------------------\n");
+    printf("MENU PRINCIPAL\n");
+    printf("(1) Adicionar pessoa a fila\n");
+    printf("(2) Remover pessoa da fila\n");
+    printf("(3) Mostrar status da fila\n");
+    printf("(0) Sair\n");
+    printf("------------------------------\n");
+    printf("SUA OPCAO: ");
 }
