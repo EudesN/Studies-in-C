@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>    //Para alocar e desalocar memoria
 #include <locale.h>    //Para adicionar caracteres do portugues
-#define LIMPA_TELA system("clear");    //Para limpar a tela
+#define LIMPA_TELA system("cls");    //Para limpar a tela
 
 //Definicao do tipo Pessoa
 typedef struct pessoa{
@@ -58,8 +58,7 @@ int main()
 }
 
 //A funcao enqueue(Pessoa **) sempre coloca alguem no final
-void enqueue(Pessoa **inicio)
-{
+void enqueue(Pessoa **inicio){
     //Mostra como esta a fila, para comparar o antes e depois
     printf("A fila antes:\n");
     imprimeFila(&inicio);
@@ -76,7 +75,7 @@ void enqueue(Pessoa **inicio)
     } else{    //Ha espaco disponivel ainda
         //Preenche com dados a variavel *prox
         printf("Digite o nome da pessoa: ");
-        fgets(prox->nome, 50, stdin);
+        gets(prox->nome);
         prox->link = NULL;
 
         if(*inicio == NULL)    //Nao ha pessoas na fila ainda?
