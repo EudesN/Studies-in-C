@@ -73,7 +73,8 @@ void enqueue(Pessoa **inicio){
     } else{    //Ha espaco disponivel ainda
         //Preenche com dados a variavel *prox
         printf("Digite o nome da pessoa: ");
-        gets(prox->nome);
+        fgets(prox->nome, sizeof(prox->nome), stdin);
+        prox->nome[strcspn(prox->nome, "\n")] = '\0';
         prox->link = NULL;
 
         if(*inicio == NULL)    //Nao ha pessoas na fila ainda?
@@ -138,7 +139,10 @@ void imprimeFila(Pessoa ***inicio){
     Pessoa *temp = **inicio;
     //A fila eh percorrida e cada elemento eh impresso na tela
     while(temp != NULL){
-        printf("%s -> ", temp->nome);
+        printf("%s", temp -> nome);
+        if(temp -> link != NULL){
+            printf(" -> ");
+        }
         temp = temp->link;
     }
     printf("\n");
