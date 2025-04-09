@@ -5,8 +5,7 @@
 #define LIMPA_TELA system("clear");    //Para limpar a tela
 
 //Definicao do tipo Pessoa
-typedef struct pessoa
-{
+typedef struct pessoa{
     char nome[50];
     struct pessoa *link;    //Link para apontar para a proxima pessoa da fila
 } Pessoa;
