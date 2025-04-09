@@ -60,7 +60,7 @@ int main()
 //A funcao enqueue(Pessoa **) sempre coloca alguem no final
 void enqueue(Pessoa **inicio){
     //Mostra como esta a fila, para comparar o antes e depois
-    printf("A fila antes:\n");
+    printf("Fila atual:\n");
     imprimeFila(&inicio);
 
     Pessoa *prox = NULL;
@@ -92,7 +92,7 @@ void enqueue(Pessoa **inicio){
         }
 
         LIMPA_TELA
-        printf("A fila depois:\n");
+        printf("Fila atualizada: \n");
         imprimeFila(&inicio);
     }
 }
