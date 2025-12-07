@@ -2,11 +2,19 @@
 
 int main(){
     int a,b,c;
-    scanf("%f", &a);
-    scanf("%f", &a);
+    int media, mediana;
 
-    if(a <= 1 || b >= 100000000){
-        
+    while (1)
+    {
+        scanf("%f", &a);
+        scanf("%f", &a);
+        if(a <= 1 || b >= 100000000){
+            
+        }
     }
+    
+    
+
+
 
 }
