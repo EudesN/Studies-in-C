@@ -6,12 +6,11 @@ int main(){
     int media, mediana;
 
     while (1){
-        scanf("%f", &a);
-        scanf("%f", &a);
+        scanf("%d", &a);
+        scanf("%d", &b);
         if(a >= 1 && b <= 100000000){
             break;
         }
-        break;
     }
     
     while (1){
@@ -24,7 +23,7 @@ int main(){
         } else{
             mediana = c;
         }
-        if(media = mediana){
+        if(media == mediana){
             break;
         }
     }
