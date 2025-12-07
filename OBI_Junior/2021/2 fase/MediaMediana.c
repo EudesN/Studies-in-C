@@ -2,7 +2,7 @@
 
 int main(){
     int a,b;
-    int c = 0;
+    int c = -100000000;
     int media, mediana;
 
     while (1){
@@ -12,10 +12,10 @@ int main(){
             break;
         }
     }
-    
+
     while (1){
         c++;
-        media = (a + b + c) / 3;
+        media = (a+ b +c) / 3;
         if((a <= b && b <= c) || (c <= b &&  b <= a)){
             mediana = b;
         } else if(( b <= a && a <= c) || (c <= a && a <= b)){
