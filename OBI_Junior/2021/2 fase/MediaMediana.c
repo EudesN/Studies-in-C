@@ -2,7 +2,7 @@
 
 int main(){
     int a,b;
-    int c = -100000000;
+    int c;
     int media, mediana;
 
     while (1){
@@ -20,7 +20,7 @@ int main(){
         mediana = b;
     } else if(( b <= a && a <= c) || (c <= a && a <= b)){
         mediana = a;
-    } else if((a <= c && c <= b) || (b <= c)){
+    } else if((a <= c && c <= b) || (b <= c && c <= a)){
         mediana = c;
     }
 
